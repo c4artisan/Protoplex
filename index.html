@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" dir="ltr"><head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Digiplex - Guía</title>
+<link rel="icon" type="image/x-icon" href="style/favicon.ico">
+<link rel="stylesheet" title="Default" href="style/style.css" type="text/css" media="screen">
+<meta property="og:image" content="https://digiplextv.github.io/digiplexweb/digiplexroku.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="channelframe">
+		<div class="channel">
+				<iframe id="IPTV" src="" width="460" height="259" allowfullscreen frameborder='0' style="width: 100%; height: 100%;"></iframe>
+			<script>
+			  function capitalizeAllLetters(str) {
+			        return str.toUpperCase();
+			  }
+                          function changeChannel(newChannel,url,description) {
+				var date = new Date();
+				var day = date.getDay();
+				var alreadyActive = document.querySelectorAll(".active");
+				[].forEach.call(alreadyActive, function(el) {
+				    el.classList.remove("active");
+				});
+				newChannel.classList.add("active");
+				for (const child of newChannel.children) {
+				  child.classList.add("active");
+				}
+				document.getElementById("IPTV").src = url;
+				document.getElementById("program-name").textContent = capitalizeAllLetters(description);
+			  }
+			</script>
+		</div>
+	<img src="style/digiplex.png" alt="DIGIPLEX" height="20px" class="framelogo"> 
+</div>
+
+<div class="channelinfoframe">
+	<h1 id="timeinfo"></h1>
+		<div class="channelinfo name">
+			<h1 class="channelinfotext" id="program-name"></h1>
+		</div>
+		<div class="channelinfo time">
+			<h1 class="channelinfotext" id="program-time">HH:MMTT - HH:MMTT</h1>
+		</div>
+</div>
+
+<div class="EPG" scrolling="yes">
+	<div class="EPGcontent">
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(aztecaunohd)/variant.mpd&keyid=a4b731bb5402a533d2fcacdd54363b79&key=ebc6a45a44642f2d6661c9470d09aced','Azteca Uno')" class="channelEPG">
+		<p class="EPGtext">001 AZTECA UNO</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live1-ott.izzigo.tv/out/u/dash/CANAL-2-HD/default.mpd&keyid=62cc24eaedef1ab322a4d52fd6bf29ad&key=3f80b04b3e2bf3d8543956882da9dd00','Las Estrellas')" class="channelEPG">
+		<p class="EPGtext">002 LAS ESTRELLAS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live3-ott.izzigo.tv/out/u/dash/IMAGEN-TV-HD/default.mpd&keyid=190e0dedd5c1ed7f5f76515d5f72058a&key=8e09da444ee448c2a85b8cd24c2eebe0','Imagen TV')" class="channelEPG">
+		<p class="EPGtext">003 IMAGEN TV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://channel02-notusa.akamaized.net/hls/live/2023914-b/event01/index.m3u8','Foro TV')" class="channelEPG">
+		<p class="EPGtext">004 FORO TV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live2-ott.izzigo.tv/out/u/dash/CANAL-5-HD/default.mpd&keyid=578f77c2e0fb7b31b1676b75b57fe922&key=6e5ee266b112e58a0e27e4384b03ed76','Canal 5')" class="channelEPG">
+		<p class="EPGtext">005 CANAL 5</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8','Canal 6')" class="channelEPG">
+		<p class="EPGtext">006 CANAL 6</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(azteca7hd)/variant.mpd&keyid=a5717e2dda7fc0fead005059e5536b6c&key=04243a2f2c5237efd969213e36f1ec77','Azteca 7')" class="channelEPG">
+		<p class="EPGtext">007 AZTECA 7</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live1-ott.izzigo.tv/out/u/dash/CANAL-9-HD/default.mpd&keyid=0bb910a4217a1af19b803e7f120796f9&key=8d3d83fadfc769674b9c7102109fc466','Nueve')" class="channelEPG">
+		<p class="EPGtext">009 NUEVE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live4-ott.izzigo.tv/out/u/dash/ONCE-HD/default.mpd&keyid=c70b0d54f58f6dd4e2046bf64084773a&key=00a3aee5319f20ddfe288240697f559e','Canal Once')" class="channelEPG">
+		<p class="EPGtext">011 CANAL ONCE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(adn40hd)/variant.mpd&keyid=d4502d2ed5f27637fa07cde1d9d01990&key=f029b1e0a115d01314692375790b22db','ADN 40')" class="channelEPG">
+		<p class="EPGtext">040 ADN40</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(mileniohd)/variant.mpd&keyid=95693bf13a5faa3afb2c25624b021038&key=70aa363b9f8d9d553d62f8a139781a1b','Milenio Television')" class="channelEPG">
+		<p class="EPGtext">120 MILENIO</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(teleformula)/variant.mpd&keyid=78e5edc6768e248bb933f4703a6cef27&key=5208e7e0187c9ef4cb79c957c4793194','Teleformula')" class="channelEPG">
+		<p class="EPGtext">121 TELEFORMULA</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live1-ott.izzigo.tv/out/u/dash/EXCELSIOR-HD/default.mpd&keyid=30a744a8c9c6fa00f9f05c83c27e4b4d&key=402d81ac9059cfdeb119b452bafb8882','Imagen Multicast')" class="channelEPG">
+		<p class="EPGtext">127 IMAGEN MULTICAST</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(bloombergtvhd)/variant.mpd&keyid=7ee225ed0ade4b53d7468962ea0b54a9&key=af8fd0c35f6390efc737cb4a08b3bd8c','Bloomberg Television')" class="channelEPG">
+		<p class="EPGtext">150 BLOOMBERG TV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(cnn)/variant.mpd&keyid=eb72c9e7401ffa4cc0ab3936cb869751&key=e45142790c822b02f6c2a77f5a40de66','CNN')" class="channelEPG">
+		<p class="EPGtext">174 CNN</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(bbcworldnews)/variant.mpd&keyid=6d93971a12a2d772f172618967bdbcdc&key=9fe4455887ec79ad1165976ebbb27abf','BBC World News')" class="channelEPG">
+		<p class="EPGtext">185 BBC WORLD NEWS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(24hours)/variant.mpd&keyid=d912e25989735515b0b2080cc900fb08&key=83d61ffb9368cba73dcc83a0302ad6a3','24h')" class="channelEPG">
+		<p class="EPGtext">186 24h</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(telemundohd)/variant.mpd&keyid=37c93f4babaaabc0da1d8b24828c3ff7&key=88e2ac75ce14cd5fbfb79083f37107dd','Telemundo Internacional')" class="channelEPG">
+		<p class="EPGtext">205 TELEMUNDO</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(start_channel)/variant.mpd&keyid=6de957e2c8090588b2cc3b4cfe0470f4&key=52d97d7f43b204d2379b43ee7d3a2a21','Star Channel')" class="channelEPG">
+		<p class="EPGtext">209 STAR CHANNEL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(warner_channel)/variant.mpd&keyid=79dc87836d93d0fb7c1bb10e301bab82&key=8b0e2a78cad3b2fe84b116adb0a9d9ef','Warner Channel')" class="channelEPG">
+		<p class="EPGtext">210 WARNER CHANNEL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(universal_channel)/variant.mpd&keyid=88cabfce565963d816be9ec08dccc29e&key=7912df72c3cb820a6a9026ef6aa71508','Universal TV')" class="channelEPG">
+		<p class="EPGtext">211 UNIVERSAL CHANNEL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(sony)/variant.mpd&keyid=896f730715176bb90484f8385512cba7&key=7372951666a6653c2dbff9f2646c1c5d','Sony Channel')" class="channelEPG">
+		<p class="EPGtext">212 SONY CHANNEL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(50dd60bc-94f1-a686-3a3f-a093154f9229)/variant.mpd&keyid=ee3ad5fb53e7b4f65d732ce7f03d53a4&key=e4a1ef4d19cbac85da7f6a29da2c5135','Comedy Central')" class="channelEPG">
+		<p class="EPGtext">213 COMEDY CENTRAL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(fx)/variant.mpd&keyid=ef5157845628b5f3f07a40d2c6e851bc&key=0f416467760f72e2269abfbab2e3c564','FX')" class="channelEPG">
+		<p class="EPGtext">214 FX</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(axnhd)/variant.mpd&keyid=7a100e0455dec1d27ea68eac2444a057&key=518d58d1998e35f07ae8aa7a7716613a','AXN')" class="channelEPG">
+		<p class="EPGtext">215 AXN</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(space)/variant.mpd&keyid=e6441ec9b4f7ddfbc4cac8801f4df9df&key=676229a75fdbc1a6b5f4a50c383490d9','Space')" class="channelEPG">
+		<p class="EPGtext">216 SPACE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(investigationdiscoveryhd)/variant.mpd&keyid=efe8aa76c0e7c3aeefed0966453b5baf&key=fbccf5bf2a03a2cef118f92210fb75bd','Investigation Discovery')" class="channelEPG">
+		<p class="EPGtext">217 INVESTIGATION DISCOVERY</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(e_entertainment_hd)/variant.mpd&keyid=80fa37cfc97ec6425a03fdc6892eecd6&key=895c40f6e9d35f296e1554af8bbe590c','E ENTERTAINMENT')" class="channelEPG">
+		<p class="EPGtext">218 E</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(discoveryhomeandhealthhd)/variant.mpd&keyid=42e70e74d2d731b7053caaa0a2621ca2&key=1c77ee4a9bf25791b0f1b11c7118f39e','Discovery Home and Health')" class="channelEPG">
+		<p class="EPGtext">221 H&amp;H</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(tlchd)/variant.mpd&keyid=6254689477110d794617a8b8da688570&key=a1126eaea3add2df3e27f3da40911ae2','TLC')" class="channelEPG">
+		<p class="EPGtext">222 TLC</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(aehd)/variant.mpd&keyid=5009add9e5b2cd627ac6ef8aa6db9123&key=3448834b1b496ed26e9727983c080844','A&amp;E')" class="channelEPG">
+		<p class="EPGtext">223 A&amp;E</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(discoverytheater)/variant.mpd&keyid=9bcc29a1959da552b2c4fa6c458d16b6&key=5ffc4bd5b909d996a0a699a51010bc15','Discovery Theater')" class="channelEPG">
+		<p class="EPGtext">224 DISCOVERY THEATER</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(discoveryworld)/variant.mpd&keyid=741059a27c32fa19c425e427b5e47850&key=bb76a0393556deba90fa068bc7e1feec','Discovery World')" class="channelEPG">
+		<p class="EPGtext">225 DISCOVERY WORLD</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(mas_chic)/variant.mpd&keyid=fe371e8ac45e6f11927f8a91abf3f268&key=e5bf0822bd2eaaf5e5c466c894c8ed6e','Mas Chic')" class="channelEPG">
+		<p class="EPGtext">226 MAS CHIC</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(e_gourment)/variant.mpd&keyid=5f3eebd14fc7f6fcbe4ba310dd654a6b&key=249312af2692abff48daa39c0dc8607d','El Gourmet')" class="channelEPG">
+		<p class="EPGtext">227 EL GOURMET</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(93b5438f-d00d-3a75-e257-95bdb326e721)/variant.mpd&keyid=b2cea93a0a01e1218cf0a3d0d2d09f25&key=a06ac367319c8926249057a2eb2a78d9','HOLA! TV')" class="channelEPG">
+		<p class="EPGtext">228 HOLA TV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://rtvelivestream.akamaized.net/rtvesec/int/tvei_ame_main.m3u8','tve')" class="channelEPG">
+		<p class="EPGtext">230 TVE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(mvshd)/variant.mpd&keyid=03a6be34f620b1cbd96800a709346b23&key=0ed65893fb20d712602af499878596eb','MVS')" class="channelEPG">
+		<p class="EPGtext">232 MVS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live4-ott.izzigo.tv/out/u/dash/DISTRITO-COMEDIA-HD/default.mpd&keyid=e69f7cb969df2eef1b60ddea0458bfef&key=12ec40e04cf8c533cf306321052726a8','Distrito Comedia')" class="channelEPG">
+		<p class="EPGtext">233 DISTRITO COMEDIA</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live5-ott.izzigo.tv/out/u/dash/TELEHIT-SD/default.mpd&keyid=6ed36c5f7d0775e21f0748dd17520bc9&key=654256cc5939f6d502969b4fbbc47286','Telehit')" class="channelEPG">
+		<p class="EPGtext">235 TELEHIT</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(83640aad-3943-f226-67b6-94086f915fd5)/variant.mpd&keyid=bb8a6b32e830d4c9c52606d93b852262&key=12ae020d159c4ef6c5a7a411a3d0aa51','MTV')" class="channelEPG">
+		<p class="EPGtext">236 MTV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(MTV_Hits)/variant.mpd&keyid=a8ece81292339c7faa15af6c562fea94&key=84072c8c9b3797ca900876f9bf1b0526','MTV Hits')" class="channelEPG">
+		<p class="EPGtext">237 MTV HITS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live2-ott.izzigo.tv/out/u/dash/TELEHIT-URBANO-SD/default.mpd&keyid=110837747ee285d4cfd1145a13288d35&key=a375d0862429a8d26fff6655e4865cd5','Telehit Musica')" class="channelEPG">
+		<p class="EPGtext">238 TELEHIT MUSICA</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(mtv00shd)/variant.mpd&keyid=5b2a17bad7db3bd57210661153c66473&key=b061ffc051848625349ddefe8d7ce171','MTV 00s')" class="channelEPG">
+		<p class="EPGtext">239 MTV 00s</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(13c8fed2-46b8-3bfb-90ae-34f938ae4b98)/variant.mpd&keyid=3443518a438f72c299ecedd7a8a2ad28&key=36a6301c3d722a2305c99e3c938aac58','Exa TV')" class="channelEPG">
+		<p class="EPGtext">240 EXA TV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live2-ott.izzigo.tv/out/u/dash/BANDAMAX-HD/default.mpd&keyid=d014b4c7f22d490f56e2d7d3fe125c15&key=69864ad4b98d06e9fcf2430ed67b6c33','Bandamax')" class="channelEPG">
+		<p class="EPGtext">241 BANDAMAX</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(tntseries)/variant.mpd&keyid=af697afe95d1a333a845aee5ba676946&key=c57bdecf3169b78e51865403c6e723bd','TNT Series')" class="channelEPG">
+		<p class="EPGtext">242 TNT SERIES</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(lifetimehd)/variant.mpd&keyid=4c17e69d6e92861fc2ca18df9c23c9c6&key=09e1bda6f1a7edeb9fb9f40f54f84be8','Lifetime')" class="channelEPG">
+		<p class="EPGtext">243 LIFETIMEHD</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://cablemas.serveo.net/iptvmantv/index.m3u8','IPTVman TV')" class="channelEPG">
+		<p class="EPGtext">244 IPTVMAN TV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(hgtv)/variant.mpd&keyid=1d494c9381e506a93e78a022219a927c&key=5b1d996b5cde3c6051062da59886740d','HGTV')" class="channelEPG">
+		<p class="EPGtext">246 HGTV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live5-ott.izzigo.tv/out/u/dash/ADULT-SWIM-HD/default.mpd&keyid=694fa2e355b31ac2c52d0a56d3d8da59&key=0d7eff2e4dc61d48489555068b0db46a','Adult Swim')" class="channelEPG">
+		<p class="EPGtext">247 ADULT SWIM</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(foodnetwork)/variant.mpd&keyid=10d3629549d8c66086b49281497b45c7&key=5f557b793c39fa4ecd5d248c4f67102d','Food Network')" class="channelEPG">
+		<p class="EPGtext">249 FOOD NETWORK</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(tntnovelashd)/variant.mpd&keyid=fdee0f86736487e4d0137d46eb7dc0fb&key=1751603a6aca9ffb044a4b60efd68fd1','TNT Novelas')" class="channelEPG">
+		<p class="EPGtext">250 TNT NOVELAS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(clubmtvsd)/variant.mpd&keyid=e17199c69158171efcfa529fcf5217c7&key=2d00b474a99817b80ed3198772e76223','Club MTV')" class="channelEPG">
+		<p class="EPGtext">256 CLUB MTV SD</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(mtv80sd)/variant.mpd&keyid=e8a544b4853026c6a1b61093986da8d6&key=7973a247a732ec06362f2a32033f6432','MTV 80s')" class="channelEPG">
+		<p class="EPGtext">258 MTV 80S SD</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(videorolahd)/variant.mpd&keyid=74993bccb315a26ce9b4f06af6be21a9&key=58953c667626292458c3dcdcf8d8cb34','Videorola')" class="channelEPG">
+		<p class="EPGtext">262 VIDEOROLA</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(f20abae4-d469-344f-5bb4-4fc88c1d683b)/variant.mpd&keyid=1236cdf9b12eba6d4a4d1494f7a0dd30&key=3737ce9763b0816e3feab4624e1aa9a7','Antena 3')" class="channelEPG">
+		<p class="EPGtext">272 ANTENA 3</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(babytv)/variant.mpd&keyid=c716dca5a51693cacb4c0fdf5d58c93e&key=8a36d0baf248b73563fbe08929e6c889','Baby TV')" class="channelEPG">
+		<p class="EPGtext">306 BABY TV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(648fabb8-962b-0e85-93d5-44d56a12851e)/variant.mpd&keyid=82d882f3aada7d99b71695d0cb418538&key=ce445596de9e7a97f62515559cd67bdb','BabyFirst')" class="channelEPG">
+		<p class="EPGtext">307 BABYFIRST</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(nickjrhd)/variant.mpd&keyid=6678b21d11148fc9604268ddbe008d72&key=8ba320049c30a2df809a90679c49b63d','Nick Jr.')" class="channelEPG">
+		<p class="EPGtext">308 NICK JR</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://rdmedia.bbc.co.uk/testcard/simulcast/manifests/hevc-ctv.mpd','Cbeebies')" class="channelEPG">
+		<p class="EPGtext">309 CBEEBIES</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(discoverykids)/variant.mpd&keyid=a57ec54090c0b450f2e2ef90de4013f9&key=a49da89c878182c99b9d2e9282d5aa3a','Discovery Kids')" class="channelEPG">
+		<p class="EPGtext">310 DISCOVERY KIDS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live3-ott.izzigo.tv/out/u/dash/ONCE-NINAS-Y-NINOS-SD/default.mpd&keyid=63f768ba20535fdc9716a6419724ff9f&key=f54e09a043130b1412beb558b4494118','Once Ninos')" class="channelEPG">
+		<p class="EPGtext">311 ONCE NINOS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(cartoonnetworks)/variant.mpd&keyid=0a8e88e5b5b3eef72f2cb4aae4462f47&key=8cf6200e54c309754ed4e99cab5874f6','Cartoon Network')" class="channelEPG">
+		<p class="EPGtext">312 CARTOON NETWORK</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://cablemas.serveo.net/streamline/index.m3u8','Streamline')" class="channelEPG">
+		<p class="EPGtext">313 STREAMLINE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(cartoonitohd)/variant.mpd&keyid=dd2c2f31defc5f22f031365d3333c880&key=f0597b0c74656c330dd6ccd50dfc5464','Cartoonito')" class="channelEPG">
+		<p class="EPGtext">314 CARTOONITO</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live4-ott.izzigo.tv/out/u/dash/BIT-ME-HD/default.mpd&keyid=3e7b281c11f0ff1c3f7ed2d02d0879c1&key=d385b87ade4441d20c5caee2a8e41da7','bitMe')" class="channelEPG">
+		<p class="EPGtext">315 BITME</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(Nickelodeon)/variant.mpd&keyid=7ec274831caa80e1ec173dbd5b0d5e83&key=cc5fb77171900013b60e4ef49da9f1ac','Nickelodeon')" class="channelEPG">
+		<p class="EPGtext">316 NICKELODEON</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live4-ott.izzigo.tv/out/u/dash/NICK-2-HD/default.mpd&keyid=090ab41e4e906a10083af00df6527e6b&key=afdb3afbc0a6f9161a7ce09d42f0b04a','TeenNick')" class="channelEPG">
+		<p class="EPGtext">317 TEENNICK</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(disney_channel)/variant.mpd&keyid=4f4ee39dd29073dbefb37d604f1c6a9a&key=5fa8a9df75dd5c7af69bb8c65052b8ae','Disney Channel')" class="channelEPG">
+		<p class="EPGtext">318 DISNEY CHANNEL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(dreamworkshd)/variant.mpd&keyid=e6c7a488a73c9c780eaea5765ad29a00&key=08ffa90ee936cbacb10a59bb66aed57d','Dreamworks')" class="channelEPG">
+		<p class="EPGtext">320 DREAMWORKS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://rdmedia.bbc.co.uk/testcard/simulcast/manifests/hevc-ctv.mpd','ToonPrime')" class="channelEPG">
+		<p class="EPGtext">321 TOONPRIME</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(disney_Junior)/variant.mpd&keyid=4a1dd77bf7714007f301a9a08364392e&key=6635f825f0f5b1cbceb55645b7c8d362','Disney Junior')" class="channelEPG">
+		<p class="EPGtext">322 DISNEY JUNIOR</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player4.html?get=https://rdmedia.bbc.co.uk/testcard/simulcast/manifests/hevc-ctv.mpd','TeenPrime')" class="channelEPG">
+		<p class="EPGtext">323 TEENPRIME</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player3.html?get=https://rtvelivestream.akamaized.net/rtvesec/int/clan_int_main.m3u8','Clan')" class="channelEPG">
+		<p class="EPGtext">324 CLAN</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://live5-ott.izzigo.tv/out/u/dash/TOONCAST-SD/default.mpd&keyid=5c9418c5729e8224f99940cf5b6c0c45&key=336cd7efd1d7a1829d0f3d22c2c8dc0a','Tooncast')" class="channelEPG">
+		<p class="EPGtext">325 TOONCAST</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(discoverychannelhd)/variant.mpd&keyid=8aba4faf1f6acb51cbde42de8c7add3d&key=c78da1bf648851714612ec36a187ab7a','Discovery Channel')" class="channelEPG">
+		<p class="EPGtext">401 DISCOVERY CHANNEL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(animalplanethd)/variant.mpd&keyid=283ebc0dcc0ad5220cc9476fb2bd9b38&key=6c5120bd84de6233793e0ec556612e6d','Animal Planet')" class="channelEPG">
+		<p class="EPGtext">402 ANIMAL PLANET</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(national_geographic)/variant.mpd&keyid=14747c7e082ba58e7391e3712578ee0a&key=4bcbff3d553e8a8b755a19bb4e93208a','National Geographic')" class="channelEPG">
+		<p class="EPGtext">403 NATIONAL GEOGRAPHIC</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(curiositystreamhd)/variant.mpd&keyid=03c5216d8cd45bb282ea6b8980251081&key=24af0d8d84fad4a48f92af9a96cc3a50','Curiosity Stream')" class="channelEPG">
+		<p class="EPGtext">404 CURIOSITY STREAM</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(history)/variant.mpd&keyid=c60825bef7f79a30696e835532e2c1e5&key=9917be8378ddcb8ff4aa26c554da639e','History')" class="channelEPG">
+		<p class="EPGtext">408 HISTORY</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(discoveryscience)/variant.mpd&keyid=0cec7cd831b2de693a63d539fe01a02b&key=133a898ef1e97e0e59f3a8064f797d90','Discovery Science')" class="channelEPG">
+		<p class="EPGtext">421 DISCOVERY SCIENCE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(discoveryturbohd)/variant.mpd&keyid=db8878cba41b2ee282b624fb75977b26&key=f3e8cdd2586046c0cf087bbe6012ce97','Discovery Turbo')" class="channelEPG">
+		<p class="EPGtext">423 DISCOVERY TURBO</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(film_and_arts)/variant.mpd&keyid=c2aecc40a610b30b03f61e965942266e&key=89a83e6b4512fd9a9e1455ac0abbe975','Film & Arts')" class="channelEPG">
+		<p class="EPGtext">430 FILM & ARTS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(foxsportshd)/variant.mpd&keyid=4fa60d52a19858e6547d081393339101&key=ea3395b4cc2eaaacb5256a49c4bfd5ca','Fox Sports')" class="channelEPG">
+		<p class="EPGtext">505 FOX SPORTS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(foxsports2hd)/variant.mpd&keyid=15670c1e2f22f9d2ccf408ec0f5ea58b&key=6f0ac30857b531398af4a939c507b934','Fox Sports 2')" class="channelEPG">
+		<p class="EPGtext">506 FOX SPORTS 2</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(pxsports)/variant.mpd&keyid=7a3331860220a10a7e8b16c137c61765&key=e9ab4d4a676be421e88c6e0127c6e087','PX Sports')" class="channelEPG">
+		<p class="EPGtext">507 PX SPORTS</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(espn_2)/variant.mpd&keyid=ae99daa35220336fe9460b9060fa65a9&key=ac284e8e24296f30496d1f39a7138205','ESPN 2')" class="channelEPG">
+		<p class="EPGtext">508 ESPN 2</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(espn)/variant.mpd&keyid=5abcf43f19d39b08596ef593c466df7a&key=8f3fc1c6f4c20c6e6e98e42c2ae0e42c','ESPN')" class="channelEPG">
+		<p class="EPGtext">509 ESPN</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(espn_3)/variant.mpd&keyid=430f38110162f19a042b4dcdc2005140&key=50541179fbd5750aea8767cb6e6b3a7b','ESPN 3')" class="channelEPG">
+		<p class="EPGtext">510 ESPN 3</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(foxsports3hd)/variant.mpd&keyid=6ca7b84908528d1753b140faa8b72bfc&key=cd93e918e5ec737d6706ad871d946fe2','Fox Sports 3')" class="channelEPG">
+		<p class="EPGtext">511 FOX SPORTS 3</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(tnt)/variant.mpd&keyid=4139b9f4b9b13b81c2d1b53acd01e5e5&key=24f771215b927cd0961be8ab963bb8d2','TNT')" class="channelEPG">
+		<p class="EPGtext">610 TNT</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(amc)/variant.mpd&keyid=6772d26ccb1dee07b3b8703520286e8e&key=e3836e151d5ff729fe237f29605f039b','AMC')" class="channelEPG">
+		<p class="EPGtext">611 AMC</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(studio_universal)/variant.mpd&keyid=ff583851013fa7fb7abeaa8d0e762a41&key=ad289e896926729a4e7559bdaa04e537','Studio Universal')" class="channelEPG">
+		<p class="EPGtext">613 STUDIO UNIVERSAL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(cinecanal)/variant.mpd&keyid=b5575c4cac7dd0aba98835c5b59a0c62&key=48cb36a63c1526132d4f969a10d6eec3','Cinecanal')" class="channelEPG">
+		<p class="EPGtext">624 CINECANAL</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(Paramount)/variant.mpd&keyid=32b13be3cd4a6b293a8f1e8d69ba03cb&key=83451d1709e2ff8ab5db1ac05e78f577','Paramount Network')" class="channelEPG">
+		<p class="EPGtext">625 PARAMOUNT</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(462e4822-6eac-91a1-f974-311a8ed1b829)/manifest.mpd&keyid=23d5d6a7be1238a89b59cb79ed2ab349&key=596508e11a62a8ebb20f67da8852e8f1','HBO Family')" class="channelEPG">
+		<p class="EPGtext">630 HBO FAMILY</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(fdde0576-5d28-3fd0-68f9-71719e2cccfe)/manifest.mpd&keyid=7aeefc391f09edf06ba2b039e8e8c439&key=e322483381692e91ff8927e518a75ea0','HBO Signature')" class="channelEPG">
+		<p class="EPGtext">631 HBO SIGNATURE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(59866a3c-83ad-17d1-3025-d9f794babca9)/manifest.mpd&keyid=9aaf6aa38c694e24b60787618a0f3793&key=4cee5d8856488e593964a082562db4ff','HBO 2')" class="channelEPG">
+		<p class="EPGtext">631 HBO 2</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(a4bb2449-4f30-142f-1e65-d757b3d53b78)/manifest.mpd&keyid=cec01f73570fd6820a31d386b39b731d&key=86e27a11d47e800fb903dc07d1f02b7e','HBO')" class="channelEPG">
+		<p class="EPGtext">633 HBO</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(e8dd8035-5c7e-f820-eec5-65a93cc4b912)/manifest.mpd&keyid=54c5643771d1eb28857f6d6cb7947aa8&key=caa44ad81c2175a711fd4f3c646a9950','HBO +')" class="channelEPG">
+		<p class="EPGtext">635 HBO +</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(8bd5b62b-fad1-7abc-2cec-cb781f5f5f20)/manifest.mpd&keyid=0e53c5914737e3287fe737a8875f7044&key=73a5e41a4c611ee26e7998cb4ebdfb67','HBO Mundi')" class="channelEPG">
+		<p class="EPGtext">636 HBO MUNDI</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(d46beb3e-6178-5996-6106-413fbc44e12f)/manifest.mpd&keyid=2fccd34e42603163d29e9df57b61b951&key=b8d12ee1376883921d2596715dcc62f5','HBO Pop')" class="channelEPG">
+		<p class="EPGtext">637 HBO POP</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(c0d08eba-2d62-97ad-fbc6-821201567186)/manifest.mpd&keyid=761160036506af26092b33aa78cf320c&key=f4e90d977d91cd5be891c2a50a11f979','HBO Xtreme')" class="channelEPG">
+		<p class="EPGtext">639 HBO XTREME</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(UniversalPremiereWest)/manifest.mpd&keyid=115d8a1195650f9dea6fa2d87e135418&key=90e1a8aacacbee7f35ab30fea1c4ab4e','Universal Premiere')" class="channelEPG">
+		<p class="EPGtext">650 UNIVERSAL PREMIERE</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(UniversalCinemaWest)/manifest.mpd&keyid=29efd3db92ba3a4655e86c1512cfe338&key=fe098b90492e9e66c7d971119d638bd6','Universal Cinema')" class="channelEPG">
+		<p class="EPGtext">651 UNIVERSAL CINEMA</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(universalcomedy)/manifest.mpd&keyid=57c0bef7e975ae07bd76c4c6b551b6cc&key=d8f2a76c4ae9542211e63c6e95c9421d','Universal Comedy')" class="channelEPG">
+		<p class="EPGtext">652 UNIVERSAL COMEDY</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/player.html?get=https://dish.akamaized.net/Content/DASH/Live/channel(UniversalCrime)/manifest.mpd&keyid=cfe6e0c1bf0de723b34491baf1243b5a&key=bf2bca1d9221381e886936a5fde48cb6','Universal Crime')" class="channelEPG">
+		<p class="EPGtext">653 UNIVERSAL CRIME</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+		<button onclick="changeChannel(this,'online/kia/kplayer1.html?get=https://tv.nknews.org/tvdash/stream.mpd','Korea Central TV')" class="channelEPG">
+		<p class="EPGtext">654 KCTV</p>
+		</button>
+		<div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	function updateTime() {
+	  var now = new Date();
+	  var timeinfo = now.toLocaleString();
+	  document.getElementById("timeinfo").innerHTML = timeinfo;
+	}
+	setInterval(updateTime, 1);
+</script>
+
+<script>
+	(function(a,b){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))window.location=b})(navigator.userAgent||navigator.vendor||window.opera,'incompatible.html');
+</script>
+
+</body>
+</html>

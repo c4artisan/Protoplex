@@ -1,0 +1,15 @@
+Digiplex License 1.1
+
+The ("Consumer") shall be the one accessing the ("Service") from outside, and they shall
+NOT modify the code, take source code copy source code,
+and harm the ("Service") by any means, including DDoS or DoS.
+
+The ("Developer") may access the ("Service") from outside or inside, or in any way possible.
+They shall not copy source code like the ("Consumer").
+Penetration testing shall not harm the service, but shall be used for testing purposes.
+Anything must be kept secure under the ("Developer").
+
+DEFINITIONS
+("Service") - The Digiplex website
+("Consumer") - The one(s) accessing the ("Service") mainly for personal or business use
+("Developer") - The one(s) developing the ("Service") for the ("Consumer") to use and to keep the ("Service") secure
