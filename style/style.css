@@ -199,3 +199,27 @@ body {
 .EPGcontent::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
+
+@media (max-width: 867px) {
+  .channelEPG.\32 {
+	  display: none;
+  }
+	.channelEPG {
+	    width: calc(100% - 32px);
+	}
+	.EPGtext {
+	    width: calc(100% + 26px);
+	}
+	.channelframe{
+		width: calc(100% - 168px)
+	}
+	.channel{
+		width: calc(100% - 34px)
+	}
+}
+
+@media (max-width: 1130px) {
+  .channelinfoframe {
+	  display: none;
+  }
+}
