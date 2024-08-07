@@ -211,10 +211,12 @@ body {
 	    width: calc(100% + 26px);
 	}
 	.channelframe{
-		width: calc(100% - 168px)
+		width: calc(100% - 168px);
+		height: calc(100% - 409px);
 	}
 	.channel{
-		width: calc(100% - 34px)
+		width: calc(100% - 34px);
+		height: calc(100% - 25px);
 	}
 }
 
