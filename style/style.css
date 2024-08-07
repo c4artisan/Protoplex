@@ -201,9 +201,9 @@ body {
 }
 
 @media (max-width: 867px) {
-  .channelEPG.\32 {
-	  display: none;
-  }
+	.channelEPG.\32 {
+	    display: none;
+	}
 	.channelEPG {
 	    width: calc(100% - 32px);
 	}
@@ -211,12 +211,19 @@ body {
 	    width: calc(100% + 26px);
 	}
 	.channelframe{
-		width: calc(100% - 168px);
+		width: calc(100% - 76px);
 		height: calc(100% - 409px);
 	}
 	.channel{
 		width: calc(100% - 34px);
 		height: calc(100% - 25px);
+	}
+	.EPG {
+	    left: 38px;
+	    width: calc(100% - 76px);
+	}
+	.channelframe {
+	    left: 38px;
 	}
 }
 
@@ -224,4 +231,18 @@ body {
   .channelinfoframe {
 	  display: none;
   }
+}
+
+@media (max-width: 687px) {
+	.channelframe{
+		width: calc(100% - 76px);
+		height: revert;
+		aspect-ratio: 16 / 9;
+	}
+	.channel{
+		width: calc(100% - 38px);
+		height: revert;
+		aspect-ratio: 16 / 9;
+		margin-top: -6px;
+	}
 }
