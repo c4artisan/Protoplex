@@ -52,5 +52,21 @@ playerInstance.setup({
 	controls: false,
 	repeat: true
 });
+
+    function switchAudioTrack() {
+        const player = jwplayer();
+        const audioTracks = player.getAudioTracks();
+        const currentTrackIndex = player.getCurrentAudioTrack();
+        const nextTrackIndex = (currentTrackIndex + 1) % audioTracks.length;
+
+        player.setCurrentAudioTrack(nextTrackIndex);
+        console.log(`Switched to audio track index: ${nextTrackIndex}`);
+    }
+
+    window.addEventListener('message', function (event) {
+        if (event.data.action === 'switchAudio') {
+            switchAudioTrack();
+        }
+    });
 </script>
 </body>

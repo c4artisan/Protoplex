@@ -35,6 +35,24 @@
 				document.getElementById("program-name").textContent = capitalizeAllLetters(description);
 			  }
 			</script>
+<script>
+    window.onload = function () {
+        function sendMessageToIframe(message) {
+            const iframe = document.getElementById('IPTV');
+            if (iframe) {
+                iframe.contentWindow.postMessage(message, '*');
+            } else {
+                console.error("SAP no está disponible actualmente debido a un error, actualice para solucionarlo o infórmenoslo en Github.");
+            }
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'q' || event.key === 'Q') {
+                sendMessageToIframe({ action: 'switchAudio' });
+            }
+        });
+    };
+</script>
 		</div>
 	<img src="style/digiplex.png" alt="DIGIPLEX" height="20px" class="framelogo"> 
 </div>
