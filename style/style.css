@@ -72,6 +72,16 @@ body {
   text-align: right
 }
 
+#osd .channelinfotext {
+	text-align: left;
+	font-size: 18pt;
+	position: absolute;
+	top: -4px;
+	left: 54px;
+	margin-right: 0px;
+	text-align: left;
+}
+
 #timeinfo {
   margin-right: 20px;
   text-align: right
@@ -151,7 +161,7 @@ body {
 .contentEPGtext {
   text-align: center;
   position: absolute;
-  width: 289px;
+  width: calc(100% - 25px);
   color: white;
   margin: 12.5px;
   font-size: 14pt;
@@ -196,6 +206,7 @@ body {
   margin-top: -52px;
   position: relative;
   border-radius: 0px;
+  width: calc(100% - 383px);
 }
 
 .EPGcontent {
@@ -368,4 +379,50 @@ body {
 .theme1 .EPGtext {
   padding-top: 5px;
   font-size: 10pt;
+}
+
+#osd {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+	z-index: 99999999999999999999;
+	text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
+
+.rectangle1 {
+	background-color: rgba(29, 59, 120, 0.7599999904632568);
+	height: 57px;
+	width: 319px;
+	border-radius: 0px 0px 40px 0px;
+	width: 864px;
+	height: 146px;
+	border: 1px solid #000000;
+}
+
+.rectangle2 {
+	background: linear-gradient(180deg, rgb(226, 226, 226) 0%, rgb(226, 226, 226) 35%, rgb(140, 140, 140) 65%, rgb(82, 82, 82) 100%);
+	width: 459px;
+	height: 52px;
+	left: 0px;
+	position: absolute;
+	top: -28px;
+	border: 1px solid #000000;
+	border-radius: 0px 10000000000000000px 10000000000000000px 0px;
+}
+
+#ellipse1 {
+	width: 90px;
+	height: 90px;
+	top: -47px;
+	position: absolute;
+	left: -46px;
+	background: radial-gradient(farthest-corner at 29px 29px, rgba(238,238,238,1) 0%, rgba(95,95,95,1) 80%);
+	border: 1px solid #000000;
+	border-radius: 10000000000000000px 10000000000000000px 10000000000000000px 10000000000000000px;
 }
