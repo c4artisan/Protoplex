@@ -44,70 +44,77 @@
 			  }
 			</script>
 			<script>
-				document.addEventListener('DOMContentLoaded', function () {
-					const channelEPGs = Array.from(document.querySelectorAll('.channelEPG'))
-						.filter(el => !el.classList.contains('2'));
-					const EPGcontent = document.querySelector('.EPGcontent');
-					let currentIndex = 0;
-					let scrollCount = 0;
-					const scrollAmount = 312;
-					const maxScrollCount = 5;
+document.addEventListener('DOMContentLoaded', function () {
+    // Select elements with 'channelEPG' class but not those with 'channelEPG 2' class
+    const channelEPGs = Array.from(document.querySelectorAll('.channelEPG'))
+        .filter(el => !el.classList.contains('2'));
+    const EPGcontent = document.querySelector('.EPGcontent');
+    let currentIndex = 0;
+    const scrollAmount = 52; // Set the amount of pixels to scroll
 
-					if (channelEPGs.length > 0) {
-						channelEPGs[currentIndex].classList.add('focused');
-					}
+    // Apply initial focus to the first valid element
+    if (channelEPGs.length > 0) {
+        channelEPGs[currentIndex].classList.add('focused');
+    }
 
-					document.addEventListener('keydown', function (event) {
-						if (channelEPGs.length === 0) return;
+    document.addEventListener('keydown', function (event) {
+        if (channelEPGs.length === 0) return;
 
-						channelEPGs[currentIndex].classList.remove('focused');
+        // Remove focus from the current element
+        channelEPGs[currentIndex].classList.remove('focused');
 
-						switch (event.key) {
-							case 'ArrowUp':
-								if (currentIndex > 0) {
-									currentIndex--;
-									scrollCount--;
-								} else {
-									currentIndex = channelEPGs.length - 1;
-									scrollCount = -maxScrollCount;
-								}
+        switch (event.key) {
+            case 'ArrowUp':
+                if (currentIndex > 0) {
+                    currentIndex--;
+                }
 
-								if (scrollCount < -maxScrollCount) {
-									scrollCount = 0;
-									if (EPGcontent) {
-										EPGcontent.scrollTop -= scrollAmount;
-									}
-								}
-								break;
+                // Check if the new element is not fully visible at the top and scroll up if needed
+                const currentElementUp = channelEPGs[currentIndex];
+                const elementTop = currentElementUp.getBoundingClientRect().top;
+                const containerTop = EPGcontent.getBoundingClientRect().top;
 
-							case 'ArrowDown':
-								if (currentIndex < channelEPGs.length - 1) {
-									currentIndex++;
-									scrollCount++;
-								} else {
-									currentIndex = 0;
-									scrollCount = maxScrollCount;
-								}
+                if (elementTop < containerTop) {
+                    EPGcontent.scrollTop -= scrollAmount;
+                }
+                break;
 
-								if (scrollCount > maxScrollCount) {
-									scrollCount = 0;
-									if (EPGcontent) {
-										EPGcontent.scrollTop += scrollAmount;
-									}
-								}
-								break;
+            case 'ArrowDown':
+                if (currentIndex < channelEPGs.length - 1) {
+                    currentIndex++;
+                }
 
-							case 'Enter':
-								channelEPGs[currentIndex].click();
-								break;
+                // Check if the new element is not fully visible at the bottom and scroll down if needed
+                const currentElementDown = channelEPGs[currentIndex];
+                const elementBottom = currentElementDown.getBoundingClientRect().bottom;
+                const containerBottom = EPGcontent.getBoundingClientRect().bottom;
 
-							default:
-								break;
-						}
+                if (elementBottom > containerBottom) {
+                    EPGcontent.scrollTop += scrollAmount;
+                }
+                break;
 
-						channelEPGs[currentIndex].classList.add('focused');
-					});
-				});
+            case 'ArrowLeft':
+                // You can customize the left navigation logic here if needed
+                break;
+
+            case 'ArrowRight':
+                // You can customize the right navigation logic here if needed
+                break;
+
+            case 'Enter':
+                // Perform action on the currently focused element
+                channelEPGs[currentIndex].click();
+                break;
+
+            default:
+                break;
+        }
+
+        // Apply focus to the new element
+        channelEPGs[currentIndex].classList.add('focused');
+    });
+});
 			</script>
 <script>
     window.onload = function () {
@@ -899,7 +906,7 @@
 		<div class="channelEPG 2">
 		<p class="contentEPGtext">No disponible..</p>
 		</div>
-		<button onclick="changeChannel(this,'online/kia/kplayer1.html?get=https://tv.nknews.org/tvdash/stream.mpd','Korea Central TV')" class="channelEPG">
+		<button onclick="changeChannel(this,'online/player4.html?get=https://tv.nknews.org/tvdash/stream.mpd','Korea Central TV')" class="channelEPG">
 		<p class="EPGtext">654 KCTV</p>
 		</button>
 		<div class="channelEPG 2">
