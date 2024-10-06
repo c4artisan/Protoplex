@@ -912,22 +912,56 @@
 </script>
 
 <script>
-const DIV = document.querySelector('.channel')
+const EPG_DIV = document.querySelector('.channelEPG');
+const CHANNEL_DIV = document.querySelector('.channel');
+const OSD = document.getElementById('osd');
 
-const toggleFullscreen = () => {
-  if (document.fullscreenElement)
-    document.exitFullscreen()
-  else
-    DIV.requestFullscreen()
+if (EPG_DIV && CHANNEL_DIV && OSD) {
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(err => console.error(err));
+    } else {
+      CHANNEL_DIV.requestFullscreen().catch(err => console.error(err));
+    }
+  };
+
+  const showOSD = () => {
+    if (OSD.classList.contains('hidden')) {
+      OSD.classList.remove('hidden');
+      OSD.style.display = 'block';
+      setTimeout(() => {
+        OSD.classList.add('hidden');
+        OSD.style.display = 'none';
+      }, 2000);
+    }
+  };
+
+  EPG_DIV.addEventListener('click', () => {
+    toggleFullscreen();
+    showOSD();
+  });
+
+  const onChange = () => {
+    if (document.fullscreenElement === CHANNEL_DIV) {
+      CHANNEL_DIV.classList.add('fullscreen');
+      CHANNEL_DIV.classList.remove('channel');
+    } else {
+      CHANNEL_DIV.classList.add('channel');
+      CHANNEL_DIV.classList.remove('fullscreen');
+    }
+  };
+
+  document.addEventListener('fullscreenchange', onChange);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'e' || event.key === 'E') {
+      showOSD();
+    }
+  });
+} else {
+  console.error('Element with class "channelEPG", "channel", or "osd" not found.');
 }
 
-DIV.addEventListener('click', toggleFullscreen)
-
-const onChange = () => {
-  DIV.className = document.fullscreenElement ? 'fullscreen' : 'channel'
-}
-
-document.addEventListener('fullscreenchange', onChange)
 </script>
 
 </body>
