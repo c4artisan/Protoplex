@@ -426,3 +426,11 @@ body {
 	border: 1px solid #000000;
 	border-radius: 10000000000000000px 10000000000000000px 10000000000000000px 10000000000000000px;
 }
+
+.focused .EPGtext {
+	color: black;
+}
+
+.focused {
+	background: #ffc75c;
+}

@@ -43,6 +43,72 @@
 				document.getElementById("program-name").textContent = capitalizeAllLetters(description);
 			  }
 			</script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const channelEPGs = Array.from(document.querySelectorAll('.channelEPG'))
+						.filter(el => !el.classList.contains('2'));
+					const EPGcontent = document.querySelector('.EPGcontent');
+					let currentIndex = 0;
+					let scrollCount = 0;
+					const scrollAmount = 312;
+					const maxScrollCount = 5;
+
+					if (channelEPGs.length > 0) {
+						channelEPGs[currentIndex].classList.add('focused');
+					}
+
+					document.addEventListener('keydown', function (event) {
+						if (channelEPGs.length === 0) return;
+
+						channelEPGs[currentIndex].classList.remove('focused');
+
+						switch (event.key) {
+							case 'ArrowUp':
+								if (currentIndex > 0) {
+									currentIndex--;
+									scrollCount--;
+								} else {
+									currentIndex = channelEPGs.length - 1;
+									scrollCount = -maxScrollCount;
+								}
+
+								if (scrollCount < -maxScrollCount) {
+									scrollCount = 0;
+									if (EPGcontent) {
+										EPGcontent.scrollTop -= scrollAmount;
+									}
+								}
+								break;
+
+							case 'ArrowDown':
+								if (currentIndex < channelEPGs.length - 1) {
+									currentIndex++;
+									scrollCount++;
+								} else {
+									currentIndex = 0;
+									scrollCount = maxScrollCount;
+								}
+
+								if (scrollCount > maxScrollCount) {
+									scrollCount = 0;
+									if (EPGcontent) {
+										EPGcontent.scrollTop += scrollAmount;
+									}
+								}
+								break;
+
+							case 'Enter':
+								channelEPGs[currentIndex].click();
+								break;
+
+							default:
+								break;
+						}
+
+						channelEPGs[currentIndex].classList.add('focused');
+					});
+				});
+			</script>
 <script>
     window.onload = function () {
         function sendMessageToIframe(message) {
