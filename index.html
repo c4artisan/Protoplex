@@ -51,24 +51,6 @@
 					let currentIndex = 0;
 					const scrollAmount = 52;
 
-					function hideCutOffOptions() {
-						const containerRect = EPGcontent.getBoundingClientRect();
-
-						channelEPGs.forEach(epg => {
-							const rect = epg.getBoundingClientRect();
-							
-							if (
-								rect.top < containerRect.top ||
-								rect.bottom > containerRect.bottom
-							) {
-								epg.style.display = 'none';
-							} else {
-								epg.style.display = '';
-							}
-						});
-					}
-
-					hideCutOffOptions();
 
 					if (channelEPGs.length > 0) {
 						channelEPGs[currentIndex].classList.add('focused');
