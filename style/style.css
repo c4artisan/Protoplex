@@ -197,8 +197,8 @@ body {
 }
 
 .EPGcontent {
-  height: 318px;
-  padding-top: 9px;
+  height: 265px;
+  margin-top: 61px;
 }
 
 .channelEPG.\32 {
@@ -206,7 +206,6 @@ body {
   margin-top: -52px;
   position: relative;
   border-radius: 0px;
-  width: calc(100% - 383px);
 }
 
 .EPGcontent {
@@ -433,4 +432,44 @@ body {
 
 .focused {
 	background: #ffc75c;
+}
+
+.channelEPG.\32 .\33 {
+  left: 665px;
+}
+.channelEPG.\32 .\34 {
+  left: 984px;
+  width: 114px;
+}
+
+
+.channelEPG.\32 .\34 .\35 {
+  width: 314px;
+  left: 344px;
+  display: flex;
+  top: 61px;
+}
+.channelEPG.\32 .\33 .\34 {
+  width: 314px;
+  left: 665px;
+  display: flex;
+  top: 61px;
+}
+.channelEPG.\32 .\34 .\37{
+  top: 61px;
+}
+
+
+#epgd {
+  position: inherit;
+  text-align: center;
+  color: black;
+  font-size: 14pt;
+  width: 314px;
+  margin: 6px;
+  border-radius: 12px;
+  border: 0px;
+  display: block;
+  margin-left: 16px;
+  margin-top: 23px;
 }
