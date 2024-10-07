@@ -12,7 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<script src="assets/osd.js"></script>
 <div class="channelframe">
 		<div class="channel">
 			<div id="osd" class="hidden">
@@ -110,7 +109,7 @@
             if (iframe) {
                 iframe.contentWindow.postMessage(message, '*');
             } else {
-                console.error("SAP no está disponible actualmente debido a un error, actualice para solucionarlo o infórmenoslo en Github.");
+                console.error("SAP no está disponible.");
             }
         }
 
@@ -1748,7 +1747,7 @@ if (EPG_DIVS.length && CHANNEL_DIV && OSD) {
   });
 
 } else {
-  console.error('Element with class "channelEPG", "channel", or "osd" not found.');
+  console.error('No se cargo correctamente el HTML :(');
 }
 </script>
 
